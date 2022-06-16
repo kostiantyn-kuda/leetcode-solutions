@@ -6,6 +6,7 @@ public class UnionFind
 {
     private readonly int[] _root;
 
+    //Time Complexity: O(N)
     public UnionFind(int numberOfElements)
     {
         _root = new int[numberOfElements];
@@ -17,6 +18,7 @@ public class UnionFind
         }
     }
 
+    //Time Complexity: O(N)
     public void Union((int left, int right) vertices)
     {
         var rootOfLeft = Find(vertices.left);
@@ -34,11 +36,13 @@ public class UnionFind
         }
     }
 
+    //Time Complexity: O(1)
     public bool Connected((int left, int right) vertices)
     {
         return Find(vertices.left) == Find(vertices.right);
     }
 
+    //Time Complexity: O(1)
     private int Find(int vertex)
     {
         return _root[GetIndex(vertex)];
