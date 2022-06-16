@@ -1,20 +1,18 @@
-﻿namespace LeetCode.Solutions.Learn.Graph;
+﻿namespace LeetCode.Solutions.Learn.Graph.DisjointSet;
 
-// Quick Find
 // https://leetcode.com/explore/learn/card/graph/618/disjoint-set/3878/
-public class UnionFind
+public class QuickFind
 {
     private readonly int[] _root;
 
     //Time Complexity: O(N)
-    public UnionFind(int numberOfElements)
+    public QuickFind(int numberOfElements)
     {
         _root = new int[numberOfElements];
 
         for (var i = 0; i < numberOfElements; i++)
         {
-            var value = i + 1;
-            _root[i] = value;
+            _root[i] = i;
         }
     }
 
@@ -45,11 +43,6 @@ public class UnionFind
     //Time Complexity: O(1)
     private int Find(int vertex)
     {
-        return _root[GetIndex(vertex)];
-    }
-
-    private int GetIndex(int value)
-    {
-        return value - 1;
+        return _root[vertex];
     }
 }
