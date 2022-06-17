@@ -6,41 +6,41 @@ public class QuickUnion
     private readonly int[] _root;
 
     //Time Complexity: O(N)
-    public QuickUnion(int numberOfElements)
+    public QuickUnion(int size)
     {
-        _root = new int[numberOfElements];
+        _root = new int[size];
 
-        for (var i = 0; i < numberOfElements; i++)
+        for (var i = 0; i < size; i++)
         {
             _root[i] = i;
         }
     }
 
     //Time Complexity: O(N)
-    public void Union((int left, int right) vertices)
+    public void Union(int x, int y)
     {
-        var leftRoot = Find(vertices.left);
-        var rightRoot = Find(vertices.right);
+        var rootX = Find(x);
+        var rootY = Find(y);
 
-        if (leftRoot != rightRoot)
+        if (rootX != rootY)
         {
-            _root[vertices.right] = vertices.left;
+            _root[y] = x;
         }
     }
 
     //Time Complexity: O(N)
-    public bool Connected((int left, int right) vertices)
+    public bool Connected(int x, int y)
     {
-        return Find(vertices.left) == Find(vertices.right);
+        return Find(x) == Find(y);
     }
 
     //Time Complexity: O(N)
-    private int Find(int vertex)
+    private int Find(int x)
     {
-        while (vertex != _root[vertex])
+        while (x != _root[x])
         {
-            vertex = _root[vertex];
+            x = _root[x];
         }
-        return vertex;
+        return x;
     }
 }

@@ -8,19 +8,19 @@ public class QuickFindTests
     {
         var quickFind = new QuickFind(10);
         // 1-2-5-6-7 3-8-9 4
-        quickFind.Union((1, 2));
-        quickFind.Union((2, 5));
-        quickFind.Union((5, 6));
-        quickFind.Union((6, 7));
-        quickFind.Union((3, 8));
-        quickFind.Union((8, 9));
+        quickFind.Union(1, 2);
+        quickFind.Union(2, 5);
+        quickFind.Union(5, 6);
+        quickFind.Union(6, 7);
+        quickFind.Union(3, 8);
+        quickFind.Union(8, 9);
 
-        quickFind.Connected((1, 5)).Should().BeTrue();
-        quickFind.Connected((5, 7)).Should().BeTrue();
-        quickFind.Connected((4, 9)).Should().BeFalse();
+        quickFind.Connected(1, 5).Should().BeTrue();
+        quickFind.Connected(5, 7).Should().BeTrue();
+        quickFind.Connected(4, 9).Should().BeFalse();
         
         // 1-2-5-6-7 3-8-9-4
-        quickFind.Union((9, 4));
-        quickFind.Connected((4, 9)).Should().BeTrue();
+        quickFind.Union(9, 4);
+        quickFind.Connected(4, 9).Should().BeTrue();
     }
 }

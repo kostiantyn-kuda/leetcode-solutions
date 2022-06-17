@@ -6,43 +6,43 @@ public class QuickFind
     private readonly int[] _root;
 
     //Time Complexity: O(N)
-    public QuickFind(int numberOfElements)
+    public QuickFind(int size)
     {
-        _root = new int[numberOfElements];
+        _root = new int[size];
 
-        for (var i = 0; i < numberOfElements; i++)
+        for (var i = 0; i < size; i++)
         {
             _root[i] = i;
         }
     }
 
     //Time Complexity: O(N)
-    public void Union((int left, int right) vertices)
+    public void Union(int x, int y)
     {
-        var rootOfLeft = Find(vertices.left);
-        var rootOfRight = Find(vertices.right);
+        var rootX = Find(x);
+        var rootY = Find(y);
         
-        if (rootOfLeft != rootOfRight)
+        if (rootX != rootY)
         {
             for (var i = 0; i < _root.Length; i++)
             {
-                if (_root[i] == rootOfRight)
+                if (_root[i] == rootY)
                 {
-                    _root[i] = rootOfLeft;
+                    _root[i] = rootX;
                 }
             }
         }
     }
 
     //Time Complexity: O(1)
-    public bool Connected((int left, int right) vertices)
+    public bool Connected(int x, int y)
     {
-        return Find(vertices.left) == Find(vertices.right);
+        return Find(x) == Find(y);
     }
 
     //Time Complexity: O(1)
-    private int Find(int vertex)
+    private int Find(int x)
     {
-        return _root[vertex];
+        return _root[x];
     }
 }

@@ -6,12 +6,12 @@ public class UnionByRank
     private readonly int[] _root;
     private readonly int[] _rank;
 
-    public UnionByRank(int numberOfElements)
+    public UnionByRank(int size)
     {
-        _root = new int[numberOfElements];
-        _rank = new int[numberOfElements];
+        _root = new int[size];
+        _rank = new int[size];
 
-        for (var i = 0; i < numberOfElements; i++)
+        for (var i = 0; i < size; i++)
         {
             _root[i] = i;
             _rank[i] = 1;
@@ -19,45 +19,45 @@ public class UnionByRank
     }
     
     //Time Complexity: O(logN)
-    public void Union((int left, int right) vertices)
+    public void Union(int x, int y)
     {
-        var rootOfLeft = Find(vertices.left);
-        var rootOfRight = Find(vertices.right);
+        var rootX = Find(x);
+        var rootY = Find(y);
 
-        if (rootOfLeft != rootOfRight)
+        if (rootX != rootY)
         {
-            var rankOfLeft = _rank[rootOfLeft];
-            var rankOfRight = _rank[rootOfRight];
+            var rankX = _rank[rootX];
+            var rankY = _rank[rootY];
 
-            if (rankOfLeft > rankOfRight)
+            if (rankX > rankY)
             {
-                _root[rootOfRight] = rootOfLeft;
+                _root[rootY] = rootX;
             }
-            else if (rankOfRight > rankOfLeft)
+            else if (rankY > rankX)
             {
-                _root[rootOfLeft] = rootOfRight;
+                _root[rootX] = rootY;
             }
             else
             {
-                _root[rootOfRight] = rootOfLeft;
-                _rank[rootOfLeft]++;
+                _root[rootY] = rootX;
+                _rank[rootX]++;
             }
         }
     }
 
     //Time Complexity: O(logN)
-    public bool Connected((int left, int right) vertices)
+    public bool Connected(int x, int y)
     {
-        return Find(vertices.left) == Find(vertices.right);
+        return Find(x) == Find(y);
     }
 
     //Time Complexity: O(logN)
-    private int Find(int vertex)
+    private int Find(int x)
     {
-        while (vertex != _root[vertex])
+        while (x != _root[x])
         {
-            vertex = _root[vertex];
+            x = _root[x];
         }
-        return vertex;
+        return x;
     }
 }
