@@ -45,5 +45,3 @@ public class PathCompressionOptimization
         return _root[x];
     }
 }
-
-// https://leetcode.com/explore/learn/card/graph/618/disjoint-set/3880/
