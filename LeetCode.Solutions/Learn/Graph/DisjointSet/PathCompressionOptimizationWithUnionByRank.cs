@@ -62,4 +62,6 @@ public class PathCompressionOptimizationWithUnionByRank
         _root[x] = Find(_root[x]);
         return _root[x];
     }
+
+    public int this[int i] => _root[i];
 }
