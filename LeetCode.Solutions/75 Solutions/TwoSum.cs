@@ -1,8 +1,8 @@
 ﻿namespace LeetCode.Solutions._75_Solutions;
 
+// https://leetcode.com/problems/two-sum/
 public class TwoSum
 {
-    // https://leetcode.com/problems/two-sum/
     public (int index1, int index2) Find(int[] nums, int target)
     {
         var dict = new Dictionary<int, int>();
