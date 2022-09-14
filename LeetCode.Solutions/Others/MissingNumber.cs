@@ -1,4 +1,4 @@
-﻿namespace LeetCode.Solutions.Random_Solutions;
+﻿namespace LeetCode.Solutions.Others;
 
 // 268
 // https://leetcode.com/problems/missing-number/
@@ -9,7 +9,7 @@ public class MissingNumber
         var expectedSum = 0;
         var currentSum = 0;
         
-        for (int i = 0; i < nums.Length; i++)
+        for (var i = 0; i < nums.Length; i++)
         {
             expectedSum += i;
             currentSum += nums[i];

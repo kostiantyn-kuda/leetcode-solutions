@@ -1,4 +1,4 @@
-﻿namespace LeetCode.Solutions.Random_Solutions;
+﻿namespace LeetCode.Solutions.Others;
 
 // 217
 // https://leetcode.com/problems/contains-duplicate/submissions/

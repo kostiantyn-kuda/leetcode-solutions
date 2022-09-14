@@ -1,6 +1,6 @@
-﻿using LeetCode.Solutions.Random_Solutions;
+﻿using LeetCode.Solutions.Others;
 
-namespace LeetCode.Solutions.Tests.Random_Solutions;
+namespace LeetCode.Solutions.Tests.Others;
 
 [TestFixture]
 public class MissingNumberTests

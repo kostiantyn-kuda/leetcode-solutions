@@ -1,4 +1,4 @@
-namespace LeetCode.Solutions.Random_Solutions;
+namespace LeetCode.Solutions.Others;
 
 // 136
 // https://leetcode.com/problems/single-number/

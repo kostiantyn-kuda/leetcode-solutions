@@ -14,7 +14,7 @@ public class MaxProfit
         var minIndex = 0;
         var maxProfit = 0;
         
-        for (int i = 0; i < prices.Length; i++)
+        for (var i = 0; i < prices.Length; i++)
         {
             var currentPrice = prices[i];
             
