@@ -13,11 +13,11 @@ public class MaxProfitTests
         _solution = new MaxProfit();
     }
     
-    [TestCase("7,1,5,3,6,4", 5)]
-    [TestCase("7,6,4,3,1", 0)]
-    public void Find(string stringArray, int expectedResult)
+    [TestCase(new[]{7,1,5,3,6,4}, 5)]
+    [TestCase(new[]{7,6,4,3,1}, 0)]
+    public void Find(int[] inputArray, int expectedResult)
     {
-        var result = _solution.Find(stringArray.ToInt32Array());
+        var result = _solution.Find(inputArray);
         result.Should().Be(expectedResult);
     }
 }

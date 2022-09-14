@@ -1,5 +1,6 @@
 ﻿namespace LeetCode.Solutions._75_Solutions;
 
+// 1
 // https://leetcode.com/problems/two-sum/
 public class TwoSum
 {

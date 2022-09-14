@@ -13,15 +13,14 @@ public class TwoSumTests
         _solution = new TwoSum();
     }
     
-    [TestCase("2,7,11,15", 9, "0,1")]
-    [TestCase("3,2,4", 6, "1,2")]
-    [TestCase("3,3", 6, "0,1")]
-    public void FindIndexes(string stringArray, int target, string expectedStringArray)
+    [TestCase(new[]{2,7,11,15}, 9, new[]{0,1})]
+    [TestCase(new[]{3,2,4}, 6, new[]{1,2})]
+    [TestCase(new[]{3,3}, 6, new[]{0,1})]
+    public void FindIndexes(int[] inputArray, int target, int[] expectedArray)
     {
-        var indexes = _solution.Find(stringArray.ToInt32Array(), target);
+        var indexes = _solution.Find(inputArray, target);
 
-        var expectedIndexArray = expectedStringArray.ToInt32Array();
-        indexes.index1.Should().Be(expectedIndexArray[0]);
-        indexes.index2.Should().Be(expectedIndexArray[1]);
+        indexes.index1.Should().Be(expectedArray[0]);
+        indexes.index2.Should().Be(expectedArray[1]);
     }
 }
