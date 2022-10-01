@@ -1,6 +1,6 @@
-﻿using LeetCode.Solutions._75_Solutions;
+﻿using LeetCode.Solutions.Others;
 
-namespace LeetCode.Solutions.Tests._75_Solutions;
+namespace LeetCode.Solutions.Tests.Others;
 
 [TestFixture]
 public class MaxProfitTests
