@@ -1,6 +1,6 @@
 ﻿namespace LeetCode.Solutions.Others;
 
-// 268
+// 268. Missing Number
 // https://leetcode.com/problems/missing-number/
 public class MissingNumber
 {

@@ -1,6 +1,6 @@
 ﻿namespace LeetCode.Solutions.Others;
 
-// 217
+// 217. Contains Duplicate
 // https://leetcode.com/problems/contains-duplicate/submissions/
 public class ContainsDuplicate
 {

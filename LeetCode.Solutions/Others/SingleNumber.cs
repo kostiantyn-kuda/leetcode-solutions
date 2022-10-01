@@ -1,6 +1,6 @@
 namespace LeetCode.Solutions.Others;
 
-// 136
+// 136. Single Number
 // https://leetcode.com/problems/single-number/
 public class SingleNumber
 {
