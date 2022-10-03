@@ -5,7 +5,7 @@ namespace LeetCode.Solutions.Tests.Others;
 [TestFixture]
 public class SingleNumberTests
 {
-    private SingleNumber _solution;
+    private SingleNumber _solution = null!;
 
     [SetUp]
     public void Setup()

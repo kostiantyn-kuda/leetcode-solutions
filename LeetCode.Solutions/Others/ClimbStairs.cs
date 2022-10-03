@@ -10,7 +10,7 @@ public class ClimbStairs
         {
             return 0;
         }
-        else if (n <= 2)
+        if (n <= 2)
         {
             return n;
         }

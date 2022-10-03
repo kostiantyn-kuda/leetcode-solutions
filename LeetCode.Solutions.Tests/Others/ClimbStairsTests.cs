@@ -5,7 +5,7 @@ namespace LeetCode.Solutions.Tests.Others;
 [TestFixture]
 public class ClimbStairsTests
 {
-    private ClimbStairs _solution;
+    private ClimbStairs _solution = null!;
 
     [SetUp]
     public void Setup()

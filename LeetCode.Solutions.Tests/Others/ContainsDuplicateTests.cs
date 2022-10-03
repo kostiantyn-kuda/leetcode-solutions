@@ -5,7 +5,7 @@ namespace LeetCode.Solutions.Tests.Others;
 [TestFixture]
 public class ContainsDuplicateTests
 {
-    private ContainsDuplicate _solution;
+    private ContainsDuplicate _solution = null!;
 
     [SetUp]
     public void Setup()

@@ -5,7 +5,7 @@ namespace LeetCode.Solutions.Tests.Others;
 [TestFixture]
 public class MaxProfitTests
 {
-    private MaxProfit _solution;
+    private MaxProfit _solution = null!;
 
     [SetUp]
     public void Setup()

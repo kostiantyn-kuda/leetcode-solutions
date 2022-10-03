@@ -5,7 +5,7 @@ namespace LeetCode.Solutions.Tests.Others;
 [TestFixture]
 public class TwoSumTests
 {
-    private TwoSum _solution;
+    private TwoSum _solution = null!;
 
     [SetUp]
     public void Setup()

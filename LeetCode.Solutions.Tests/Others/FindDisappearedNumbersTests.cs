@@ -5,7 +5,7 @@ namespace LeetCode.Solutions.Tests.Others;
 [TestFixture]
 public class FindDisappearedNumbersTests
 {
-    private FindDisappearedNumbers _solution;
+    private FindDisappearedNumbers _solution = null!;
 
     [SetUp]
     public void Setup()
