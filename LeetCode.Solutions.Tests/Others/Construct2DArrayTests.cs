@@ -6,7 +6,7 @@ namespace LeetCode.Solutions.Tests.Others;
 [TestFixture]
 public class Construct2DArrayTests
 {
-    private Construct2DArray _solution;
+    private Construct2DArray _solution = null!;
 
     [SetUp]
     public void Setup()
