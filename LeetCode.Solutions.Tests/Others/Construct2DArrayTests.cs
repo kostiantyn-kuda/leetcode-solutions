@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using LeetCode.Solutions.Others;
 
 namespace LeetCode.Solutions.Tests.Others;
@@ -28,17 +29,9 @@ public class Construct2DArrayTests
         );
     }
     
-    public static IEnumerable<TestCaseData> DataSet3()
-    {
-        yield return new TestCaseData(
-            new[]{1, 2}, 1, 1, new[] { new[]{ 1 } }
-        );
-    }
-    
     [Test]
     [TestCaseSource(nameof(DataSet1))]
     [TestCaseSource(nameof(DataSet2))]
-    [TestCaseSource(nameof(DataSet3))]
     public void ConstructTest(int[] inputArray, int rows, int columns, int[][] expectedArray)
     {
         var resultArray = _solution.Construct(inputArray, rows, columns);
