@@ -1,6 +1,4 @@
-﻿using LeetCode.Solutions.Others;
-
-namespace LeetCode.Solutions.Tests.Others;
+﻿namespace LeetCode.Solutions.Tests.Others.Arrays;
 
 [TestFixture]
 public class MaxSubArrayTests
@@ -16,18 +14,18 @@ public class MaxSubArrayTests
     [TestCase(new[]{-2,1,-3,4,-1,2,1,-5,4}, 6)]
     [TestCase(new[]{1}, 1)]
     [TestCase(new[]{5,4,-1,7,8}, 23)]
-    public void FindWithBrutForceTest(int[] inputArray, int expectedResult)
+    public void FindWithBruteForceTest(int[] inputArray, int expectedResult)
     {
-        var result = _solution.FindWithBrutForce(inputArray);
+        var result = _solution.FindWithBruteForce(inputArray);
         result.Should().Be(expectedResult);
     }
     
     [TestCase(new[]{-2,1,-3,4,-1,2,1,-5,4}, 6)]
     [TestCase(new[]{1}, 1)]
     [TestCase(new[]{5,4,-1,7,8}, 23)]
-    public void FindWithBrutForcePlusPartialCachingTest(int[] inputArray, int expectedResult)
+    public void FindWithBruteForcePlusPartialCachingTest(int[] inputArray, int expectedResult)
     {
-        var result = _solution.FindWithBrutForcePlusPartialCaching(inputArray);
+        var result = _solution.FindWithBruteForcePlusPartialCaching(inputArray);
         result.Should().Be(expectedResult);
     }
     

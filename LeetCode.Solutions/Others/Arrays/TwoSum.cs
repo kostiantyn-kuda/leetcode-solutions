@@ -1,4 +1,4 @@
-﻿namespace LeetCode.Solutions.Others;
+﻿namespace LeetCode.Solutions.Others.Arrays;
 
 // 1. Two Sum
 // https://leetcode.com/problems/two-sum/
@@ -13,9 +13,9 @@ public class TwoSum
 
             var diff = target - value;
 
-            if (dict.ContainsKey(diff))
+            if (dict.TryGetValue(diff, out var dictValue))
             {
-                return (dict[diff], i);
+                return (dictValue, i);
             }
             dict[value] = i;
         }

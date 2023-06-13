@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using LeetCode.Solutions.Others;
+﻿using System.Collections.Generic;
 
 namespace LeetCode.Solutions.Tests.Others;
 

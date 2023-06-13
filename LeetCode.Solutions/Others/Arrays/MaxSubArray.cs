@@ -1,10 +1,10 @@
-﻿namespace LeetCode.Solutions.Others;
+﻿namespace LeetCode.Solutions.Others.Arrays;
 
 // 53. Maximum Subarray
 // https://leetcode.com/problems/maximum-subarray/
 public class MaxSubArray
 {
-    public int FindWithBrutForce(int[] nums)
+    public int FindWithBruteForce(int[] nums)
     {
         int startIndex = -1;
         int endIndex = -1;
@@ -31,7 +31,7 @@ public class MaxSubArray
         return currentSum;
     }
 
-    public int FindWithBrutForcePlusPartialCaching(int[] nums)
+    public int FindWithBruteForcePlusPartialCaching(int[] nums)
     {
         int startIndex = -1;
         int endIndex = -1;

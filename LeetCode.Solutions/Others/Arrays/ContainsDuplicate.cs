@@ -1,7 +1,7 @@
-﻿namespace LeetCode.Solutions.Others;
+﻿namespace LeetCode.Solutions.Others.Arrays;
 
 // 217. Contains Duplicate
-// https://leetcode.com/problems/contains-duplicate/submissions/
+// https://leetcode.com/problems/contains-duplicate/
 public class ContainsDuplicate
 {
     public bool Check(int[] nums)

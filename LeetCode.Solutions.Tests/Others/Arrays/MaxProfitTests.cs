@@ -1,6 +1,4 @@
-﻿using LeetCode.Solutions.Others;
-
-namespace LeetCode.Solutions.Tests.Others;
+﻿namespace LeetCode.Solutions.Tests.Others.Arrays;
 
 [TestFixture]
 public class MaxProfitTests
